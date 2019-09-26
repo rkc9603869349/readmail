@@ -58,16 +58,10 @@ function authorize(credentials, callback) {
  * @param {getEventsCallback} callback The callback to call with the authorized
  *     client.
  */
-function getNewToken(oauth2Client, callback) {
-  var authUrl = oauth2Client.generateAuthUrl({access_type: 'offline', scope: SCOPES});
-  //console.log('Authorize this app by visiting this url: ', authUrl);
-  var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+
  
   
-   code ="4/rQFztchi5wiIISkWsut9AErKseAq_s8C0VhK9Dah7aQFcwvLEJpOhpU"
+   code ="4/rQHpsXOmedIunYH0s8iZ1FWjPCtopNHK5S34kFXOJJtxBpAq-jQjKJk"
     oauth2Client.getToken(code, function(err, token) {
       if (err) {
         console.log('Error while trying to retrieve access token', err);
